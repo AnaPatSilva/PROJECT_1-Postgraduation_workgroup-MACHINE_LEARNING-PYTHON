@@ -111,16 +111,12 @@ This is our dataset:
 ![Data_Profiling](https://github.com/AnaPatSilva/PROJECT_1-Postgraduation_workgroup-MACHINE_LEARNING-PYTHON/blob/main/Images/Data_Profiling.png)
 
 - In SQL we created a dataset with all the tables and relationships between them (fct with dim)
+- As the most relevant information for our analysis is found in the fact tables (_orders_ and _order_item_) we decided to join both tables and work from there to create our dataset:
 
 ![SQL](https://github.com/AnaPatSilva/PROJECT_1-Postgraduation_workgroup-MACHINE_LEARNING-PYTHON/blob/main/Images/SQL.png)
-
 ![SQL](https://github.com/AnaPatSilva/PROJECT_1-Postgraduation_workgroup-MACHINE_LEARNING-PYTHON/blob/main/Images/SQL1.png)
-
 ![SQL](https://github.com/AnaPatSilva/PROJECT_1-Postgraduation_workgroup-MACHINE_LEARNING-PYTHON/blob/main/Images/SQL2.png)
-
 ![SQL](https://github.com/AnaPatSilva/PROJECT_1-Postgraduation_workgroup-MACHINE_LEARNING-PYTHON/blob/main/Images/SQL3.png)
-
-- As the most relevant information for our analysis is found in the fact tables (_orders_ and _order_item_) we decided to join both tables and work from there to create our dataset:
 
 After that union:
 - We changed the timestamp to date only, as the time will be irrelevant to our analysis
@@ -129,13 +125,10 @@ After that union:
 
 ![RFM](https://github.com/AnaPatSilva/PROJECT_1-Postgraduation_workgroup-MACHINE_LEARNING-PYTHON/blob/main/Images/RFM.png)
 
-- Since we are going to make a segmentation of customers, we are going to do an RFM analysis with the following variables: Recency, Frequency and Monetary
+- Since we are going to make a segmentation of customers, we are going to do an RFM analysis with the following variables: **Recency**, **Frequency** and **Monetary**
 - All the other columns have been eliminated and we have a new dataset
 - We did the data profiling of the new dataset and found that we have many duplicate lines. After analysis, we found that the duplication was due to the union of the two fact columns, because _fct_order_item_ records one line for each product purchased in the order. So if an order has more than one product, it will be represented by more than one line
 - The joins have been revised and updated to left joins
-
-![SQL](https://github.com/AnaPatSilva/PROJECT_1-Postgraduation_workgroup-MACHINE_LEARNING-PYTHON/blob/main/Images/SQL4.png)
-
 - Query for creating the new dataset:
 
 ![Query_new_dataset](https://github.com/AnaPatSilva/PROJECT_1-Postgraduation_workgroup-MACHINE_LEARNING-PYTHON/blob/main/Images/Query_new_dataset.png)
@@ -144,14 +137,19 @@ After that union:
 
 ![New_dataset](https://github.com/AnaPatSilva/PROJECT_1-Postgraduation_workgroup-MACHINE_LEARNING-PYTHON/blob/main/Images/New_dataset.png)
 
-- Creation of target column (match): Binary variable (customer buys _"1"_ or does not buy _"0"_ in future block)
+- Creation of target column (_match_): Binary variable (customer buys _"1"_ or does not buy _"0"_ in future block)
 - Split the table (past and future) at the defined cut-off (01/03/2018)
 - Creation of a new table (_"match"_) only with customers from the "past" who placed orders in the "future" (after the cut-off)
 - Creation of the remaining features:
+
 _Recency_ - Difference between the current date and the order date (in days) for each customer
+
 _Frequency_ - number of _order_id_ per customer
-_Monetary_ - sum of _total_paid_ per customer 
+
+_Monetary_ - sum of _total_paid_ per customer
+
 _Products_ - number of products purchased per customer
+
 - New dataset to be used for segmentation and classification models:
 
 ![Dataset_classification](https://github.com/AnaPatSilva/PROJECT_1-Postgraduation_workgroup-MACHINE_LEARNING-PYTHON/blob/main/Images/Dataset_classification.png)
