@@ -216,6 +216,7 @@ i.e. the number of customers in each group is not too different
 ![Snake_Plot](https://github.com/AnaPatSilva/PROJECT_1-Postgraduation_workgroup-MACHINE_LEARNING-PYTHON/blob/main/Images/Snake_Plot.png)
 
 Snake plot analysis
+
 _Cluster 0_:
 - Bought **recently**
 - **Infrequently**
@@ -277,10 +278,14 @@ Considering the last two models analyzed (2 and 3), we found that cluster 2, whi
 
 ![Decision_Tree](https://github.com/AnaPatSilva/PROJECT_1-Postgraduation_workgroup-MACHINE_LEARNING-PYTHON/blob/main/Images/Decision_Tree.png)
 
-**Accuracy** (97,63%): The model correctly classified 98% of the two classes (_NC_ - Customers don't buy and _C_ - Customers buy)|
+**Accuracy** (97,63%): The model correctly classified 98% of the two classes (_NC_ - Customers don't buy and _C_ - Customers buy)
+
 **Precision** (3,92%): 3.9% of correctly classified cases are true positives (_C_)
+
 **Recall** (3,21%): Only 3.2% of the positives (_C_) were correctly classified by the model
+
 **F1 Score** (3,53%)
+
 **AUC** (51%): The model is only 51% capable of distinguishing between the two classes (_NC_ and _C_)
 
 - Although the classifier learns "0" very well, it is very poor at classifying "1s"
