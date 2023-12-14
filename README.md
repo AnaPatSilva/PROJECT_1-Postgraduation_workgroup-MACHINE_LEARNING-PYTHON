@@ -309,3 +309,9 @@ Considering the last two models analyzed (2 and 3), we found that cluster 2, whi
 This was a great challenge and a great way to put into practice everything we've learned.
 
 With this project we were also able to think about how these models can be applied in the real world.
+
+
+## Notebooks
+- [Target](https://github.com/AnaPatSilva/PROJECT_1-Postgraduation_workgroup-MACHINE_LEARNING-PYTHON/blob/main/Notebooks/notebooks_Target.html)
+- [Customer Segmentation](https://github.com/AnaPatSilva/PROJECT_1-Postgraduation_workgroup-MACHINE_LEARNING-PYTHON/blob/main/Notebooks/notebooks_customer_segmentation_notebook.html)
+- [Prediction](https://github.com/AnaPatSilva/PROJECT_1-Postgraduation_workgroup-MACHINE_LEARNING-PYTHON/blob/main/Notebooks/notebooks_Prediction.html)
